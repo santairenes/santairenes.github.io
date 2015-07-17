@@ -1,0 +1,37 @@
+#principal
+{
+    width:69%;
+    display:inline-block;
+}
+
+#lateral
+{
+    width:30%;
+    display:inline-block;
+    vertical-align: top;
+}
+
+.imgLateral
+{
+    text-align: center;
+    border:1px solid black;
+    border-radius: 3px;
+    margin: 4px 0px;
+}
+
+.imgLateral img
+{
+    height:150px;
+}
+
+#slider1
+{
+    width:400px;
+    height:400px;
+    margin:0px auto;
+    transition: background 2s;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+}
