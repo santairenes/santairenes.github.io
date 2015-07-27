@@ -1,0 +1,24 @@
+table
+{
+    margin:50px auto;
+}
+
+td
+{
+    padding:5px 15px;
+}
+
+.reserva, .input-group
+{
+    width:200px !important;
+}
+
+.input-group-addon
+{
+    max-height: 20px !important;
+}
+
+.centrar
+{
+    text-align: center;
+}

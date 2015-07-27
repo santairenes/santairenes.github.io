@@ -1,4 +1,6 @@
+var slider1 = 1;
 $(document).ready(function(){
+
     var fecha = new Date();
     var dia = fecha.getDate();
     var mes = fecha.getMonth()+1;
@@ -22,12 +24,14 @@ $(document).ready(function(){
         autoclose: true,
         todayHighlight: true
     });
-    
-    $('#finicial').change(function(){
-        rango = $('#finicial').val();
-        $('#ffinal').parent().datepicker('update', rango);
-        $('#ffinal').parent().datepicker('setStartDate', rango);
+    if (!($( ".dropdown-toggle" ).length)){
+        $('.dropdown-toggle').dropdown();
+        alert("hola");
+    }
+    $('#finicial, #finicial2').change(function(){
+        rango = $('#finicial, #finicial2').val();
+        $('#ffinal, #ffinal2').parent().datepicker('update', rango);
+        $('#ffinal, #ffinal2').parent().datepicker('setStartDate', rango);
     });
-    
-    
+
 });

@@ -13,12 +13,16 @@ body
 
 header
 {
-    background: lightblue;
+    background: url(../imagenes/larga.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align:center;
+    height:100px
 }
 
 header img
 {
-    width:140px;
+    height:100px;
 }
 
 header span
@@ -26,6 +30,16 @@ header span
     font-size: 60px;
     display: inline-block;
     vertical-align: middle;
+}
+
+@media (min-width: 1170px)
+{
+    header
+    {   
+        background: linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%,rgba(0,0,0,1)) , url(../imagenes/larga.png) darkblue;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 nav
@@ -36,6 +50,7 @@ nav
 section
 {	
 	margin:0px auto;
+    width:1000px;
 	height:100%;
     position:relative;
     padding-bottom: 70px;
@@ -51,19 +66,19 @@ section
     float:left;
 }
 
-.menu > ul > li > a
+.menu > ul > li > a, .menu > ul > li > a:focus
 {
     font-weight: bold;
     color:black;
-    
+    background:white;
 }
 
 .menu > ul > li:hover > a, .menu .active a
 {
-    color:blue;
+    color:rgb(0,0,64);
     background:white;
     padding-bottom:7px;
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid rgb(0,0,64);
     transition: all 0.2s;
 }
 
@@ -77,7 +92,7 @@ section
 
 .dropdown-santa li:hover > a
 {
-    color:blue !important;
+    color:rgb(0,0,64) !important;
 }
 
 

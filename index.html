@@ -3,55 +3,60 @@
 	<head>
 		<title>Santa Irenes</title>
 		<meta name="author" content="Jesusangel Jimenez">
-    <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>    
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/reservaciones.css"><!-- esto no va aqui -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker3.min.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/angular-animate.min.js" ></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/bootstrap-datepicker.es.min.js"></script>
 	</head>
-	<body>
+	<body ng-app="santa">
         <div id="contenedor">
             <header>
-                <img id="logo" src="imagenes/5.bmp">
-                <span>Santa Irenes</span>
             </header>
             <nav class="menu">
                 <ul class="nav">
-                    <li class="active inicio"><a href="#">Inicio</a></li>
+                    <li><a href="#/inicio">Inicio</a></li>
                     <li class="dropdown">
                       <a id="instalaciones" class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-haspopup="true" aria-expanded="false">Instalaciones <span class="caret"></span></a>
                       <ul class="dropdown-menu dropdown-santa" aria-labelledby="instalaciones">
                         <li class="dropdown-header">Habitaciones</li>
-                        <li><a href="#">cable largo</a></li>
-                        <li><a href="#">cable alto</a></li>
+                        <li><a href="#">Individual</a></li>
+                        <li><a href="#">Matrimonial</a></li>
                         <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">Maquinas de soldar</li>
-                        <li><a href="#">maquina roja</a></li>
-                        <li><a href="#">maquina azul</a></li>
+                        <li class="dropdown-header">Otras áreas</li>
+                        <li><a href="#">Piscina</a></li>
+                        <li><a href="#">Restaurant</a></li>
                       </ul>
                     </li>
                     <li><a href="#">Contacto</a></li>
                     <li><a href="#">Quienes Somos</a></li>
                     <li><a href="#">Ubicación</a></li>
-                    <li><a href="reservaciones.html">Reservaciones</a></li>
+                    <li><a href="#/reservaciones">Reservaciones</a></li>
                     <li><a href="#">Comentarios</a></li>
-                    
+                    <li style="float:right">aqui puede ir numero de contacto</li>
                 </ul>
+                
             </nav>
             <section>
-                <div id="principal">
-                    <div id="slider1"></div>
-                </div>
-                <div id="lateral">
-                    <a href=""><div class="imgLateral"><img src=""/></div></a>
-                    <a href=""><div class="imgLateral"><img src=""/></div></a>
-                </div>
+                <div ng-view=""></div>
             </section>
             <footer>
-                <span>copyright</span>
+                <span>copyright</span><br>
+                oooooooooooo aqui todo lo de contacto, o una pag dedicada a ella se puede poner en varios lados
             </footer>
         </div>
 	</body>
+    <script src="app/app.js"></script>
+    <script src="app/controladores.js"></script>
+    <script src="app/calendario.js"></script>
+    <script src="app/reservaciones.js"></script>
 </html>
