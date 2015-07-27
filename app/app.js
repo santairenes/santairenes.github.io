@@ -33,7 +33,7 @@ app.run(function ($rootScope, $location, $interval) {
         $("ul.nav li").removeClass("active");
         var activo = $location.path();
         if((activo == "/inicio") || (activo == "/")){$(".nav li:nth-child(1)").addClass("active");}
-        if(activo == "/reservaciones"){$(".nav li:nth-child(6)").addClass("active");}
+        if(activo == "/reservaciones"){$(".nav > li:nth-child(6)").addClass("active");}
     });
 });
 
